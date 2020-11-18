@@ -1,0 +1,14 @@
+# - Config file for the PTHREAD package
+# It defines the following variables
+#  PTHREAD_INCLUDE_DIRS - include directories for PTHREAD
+#  PTHREAD_LIBRARIES    - libraries to link against
+#  PTHREAD_EXECUTABLE   - the bar executable
+
+# Compute paths
+get_filename_component(PTHREAD_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+set(PTHREAD_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+
+# These are IMPORTED targets created by PTHREADTargets.cmake
+set(PTHREAD_LIBRARIES ${PTHREAD_CMAKE_DIR}/lib/pthreads.lib)
+set(PTHREAD_DEFINITIONS "@CONF_DEFINITIONS@")
+
